@@ -1,0 +1,25 @@
+.Home {
+    background-image: url(../images/weather.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+.main-weather {
+    height: 10%;
+    width: 60%;
+    margin-top: 10%;
+    margin-left: 20%;
+    border: 1px solid black;
+}
+
+.SearchBarPosition{
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-control {
+    font-size: 1rem !important;
+    line-height: 2 !important;
+    border-radius: 20px !important;
+    width: 60%;
+  }
