@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
-import { Form } from "react-bootstrap";
-import $ from 'jquery';
+// import { Form } from "react-bootstrap";
+import Weather from './weather';
+// import $ from 'jquery';
 
 const Home = () => {
     const [lat, setLat] = useState([]);
@@ -27,19 +28,13 @@ const Home = () => {
 
     return (
         <div className="Home">
-                    <Form className="SearchBarPosition" >
-          <Form.Control
-          className="Search"
-            type="text"
-            name="UserSearch"
-            placeholder="Search for a city"
-          />
-      </Form>
-        <div className="main-weather">
-            <h1 className="today"> Todays Weather</h1>
+            {(typeof data.main != 'undefined') ? (
+        <Weather weatherData={data}/>
+      ): (
+        <div></div>
+      )}
             </div>
-        </div>
     );
     }
 
-export default Home;
+// export default Home;
